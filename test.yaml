@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  meri_db:
+    image: mariadb
+    restart: always
+    environment:
+      MY_SQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  meri_ui:
+    image: adminer
+    restart: always
+    ports:
+     - 8080:8080
